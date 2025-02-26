@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  fyle_app:
+    build: .
+    container_name: Vomychat
+    ports:
+      - "8100:8100"
+    environment:
+      - FLASK_APP=myapp
+    volumes:
+      - ./core/store.sqlite3:/app/core/store.sqlite3
